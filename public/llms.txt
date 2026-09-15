@@ -1,0 +1,6 @@
+# EgyPyramid
+
+Welcome to EgyPyramid website. This site provides information about movies and series.
+شاهد أحدث الأفلام والمسلسلات بجودة عالية عبر منصة إيجي بيراميد. محتوى متجدد يومياً
+## Core Pages
+- [Home](https://vercel.app)
