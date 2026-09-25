@@ -8,7 +8,7 @@ export default function MoviesGrid({ movies }) {
 
 
   return (
-    <section className="relative group/section ">
+    <section className="relative">
       <SectionHeader
         title="أفلام جديدة"
         subtitle="أحدث ما أضيف للمكتبة"
@@ -18,30 +18,23 @@ export default function MoviesGrid({ movies }) {
 
       {/* Container السكرول مع تأثير Masking */}
       <div className="relative">
-        <div className="flex overflow-x-auto gap-2 md:gap-6 no-scrollbar mr-2 py-2 md:py-fluid-p snap-x snap-mandatory scroll-smooth group/scroll">
+        <div className="flex overflow-x-auto gap-2 md:gap-6 no-scrollbar mr-2 py-2 md:py-fluid-p snap-x snap-proximity">
           {movies?.data?.map((media, index) => (
 
             // التعديل في الديف اللي شايل الـ MovieCard
             <div
               key={media.id}
-              className="flex-none w-40 md:w-52 snap-start transform duration-500 lg:hover:-translate-y-2 animate-fade-in-up"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-              }}
+              className="flex-none w-40 md:w-52 snap-start"
             >
 
-              {/* إضافة تأثير ظل خلفي عند الهوفر */}
-              <div className="relative group/card">
-                <div className="absolute -inset-2 bg-(--accent)/3 rounded-4xl blur-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
-                <MovieCard media={media} index={index} />
-              </div>
+              <MovieCard media={media} index={index} />
             </div>
           ))}
 
           {/* كارت "عرض المزيد" في آخر السكرول - تركة ذكية */}
           <div className="flex-none w-40 md:w-52 flex items-center justify-center snap-start">
             <a href="/genre/movies" className="group/more flex flex-col items-center gap-4 text-slate-400 lg:hover:text-(--accent) transition-colors">
-              <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110">
+              <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center lg:group-hover/more:border-(--accent) lg:group-hover/more:scale-105 transition-[border-color,transform] duration-200">
                 <Film size={24} />
               </div>
               <span className="text-xs font-black uppercase tracking-widest">عرض المزيد</span>

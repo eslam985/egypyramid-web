@@ -35,14 +35,14 @@ export default function MovieCard({ media }) {
       href={href}
       onClick={handleClick}
       prefetch={false}
-      className="group block relative perspective-1000 no-underline">
-      <div className="relative aspect-2/3 w-full overflow-hidden rounded-3xl bg-(--card-bg) border border-(--foreground)/10 group-hover:border-(--accent)/40 transition-[transform,border-color] duration-300 ease-out group-hover:-translate-y-2 shadow-xl isolate will-change-transform">
+      className="group block relative no-underline">
+      <div className="relative aspect-2/3 w-full overflow-hidden rounded-3xl bg-(--card-bg) border border-(--foreground)/10 group-hover:border-(--accent)/40 transition-[transform,border-color] duration-300 ease-out group-hover:-translate-y-2 shadow-xl isolate">
         <Image
           src={imgSrc}
           alt={media.title || "فيلم"}
           fill
           quality={65}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform"
+          className="object-cover transition-transform duration-300 ease-out lg:group-hover:scale-105"
           sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, (max-width: 1024px) 20vw, (max-width: 1280px) 16.66vw, 200px"
           loading="lazy"
           decoding="async"

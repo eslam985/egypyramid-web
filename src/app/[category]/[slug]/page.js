@@ -154,7 +154,7 @@ export default async function MediaPage({ params, searchParams }) {
                                 </div>
 
                                 {/* حالة العمل */}
-                                <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+                                <div className="p-4 rounded-2xl bg-white/2 border border-white/5 flex items-center justify-between">
                                     <span className="text-[10px] font-black uppercase tracking-widest opacity-80">الحالة</span>
                                     <span className="flex items-center gap-2 text-[10px] font-bold text-emerald-700 uppercase tracking-widest">
                                         <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
