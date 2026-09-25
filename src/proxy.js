@@ -679,10 +679,16 @@ export async function proxy(request) {
         isScraper = true;
     }
 
-    // 2. كشف تزييف الكروم الحقيقي فقط (لو ادعى إنه كروم حديث وما بعتش sec-ch-ua)
+    // 2. كشف تزييف الكروم (نسخة مخففة)
+    // بنحظر فقط لو ادعى إنه كروم + مفيش sec-ch-ua + وفي نفس الوقت مفيش Accept-Language أو شكله مشبوه
+    // عشان نسمح للأدوات الشرعية اللي بتبعت UA كروم من غير Client Hints
     if (ua.includes("Chrome/") && !secChUa) {
         const chromeVerMatch = ua.match(/Chrome\/(\d+)/);
-        if (chromeVerMatch && parseInt(chromeVerMatch[1]) > 110) {
+        const isModernChrome = chromeVerMatch && parseInt(chromeVerMatch[1]) > 110;
+        
+        // لو كروم حديث + مفيش sec-ch-ua + ومفيش Accept-Language → سكريبر
+        // لو معاه Accept-Language يبقى نسيبه يعدي والـ uaSpoofScore يتصرف معاه
+        if (isModernChrome && !acceptLang) {
             isScraper = true;
         }
     }
