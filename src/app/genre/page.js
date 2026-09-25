@@ -89,7 +89,7 @@ export default async function GenresIndexPage() {
               prefetch={false}
               key={genre.id}
               href={`/genre/${encodeURIComponent(genre.slug)}`} // 👈 ترميز الـ Slug يحميك من كراش الحروف العربية لو كان اسم القسم بالعربي
-              className="glass-card group relative p-3 md:p-8 h-35 md:h-48 flex flex-col items-center justify-center no-underline border-white/5 hover:border-(--accent)/40 duration-700 animate-fade-in-up overflow-hidden group"
+              className="glass-card group relative p-3 md:p-8 h-35 md:h-48 flex flex-col items-center justify-center no-underline border-white/5 lg:hover:border-(--accent)/40 duration-700 animate-fade-in-up overflow-hidden group"
               style={{ animationDelay: `${index * 40}ms` }}
             >
               {/* تأثير الحلقات الخلفية عند الـ Hover */}

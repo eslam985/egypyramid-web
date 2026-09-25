@@ -91,10 +91,10 @@ export default function QuickGenres({ genres }) {
                             prefetch={false}
                             className="group relative flex items-center gap-3 px-5 py-3 rounded-xl 
                                      bg-[var(--card-bg)] border border-slate-200 dark:border-white/[0.04] 
-                                     hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/[0.02] 
-                                     hover:-translate-y-0.5 duration-300 ease-out
+                                     lg:hover:border-[var(--accent)]/30 lg:hover:bg-[var(--accent)]/[0.02] 
+                                     lg:hover:-translate-y-0.5 duration-300 ease-out
                                      snap-start flex-none no-underline shadow-xs
-                                     hover:shadow-[0_8px_24px_-12px_rgba(var(--accent-rgb),0.3)]"
+                                     lg:hover:shadow-[0_8px_24px_-12px_rgba(var(--accent-rgb),0.3)]"
                         >
                             {/* تأثير النيون للأيقونة عند الهوفير */}
                             <div className="flex items-center justify-center text-slate-400 group-hover:text-[var(--accent)] transition-colors duration-300">

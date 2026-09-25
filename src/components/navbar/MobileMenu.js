@@ -84,7 +84,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                                                 href={`/${item.category === 'tv' ? 'tv' : 'movie'}/${item.slug}`}
                                                 prefetch={false}
                                                 onClick={onClose}
-                                                className="flex items-center gap-4 p-3 hover:bg-(--accent)/10 border-b border-slate-100 dark:border-white/5 last:border-0 no-underline transition-colors"
+                                                className="flex items-center gap-4 p-3 lg:hover:bg-(--accent)/10 border-b border-slate-100 dark:border-white/5 last:border-0 no-underline transition-colors"
                                             >
                                                 {/* بوستر صغير محسّن */}
                                                 <div className="relative w-10 h-14 shrink-0 overflow-hidden rounded-lg border border-white/10 shadow-sm">
@@ -133,7 +133,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                             href="/"
                             prefetch={false}
                             onClick={onClose}
-                            className="flex items-center gap-3 p-4 rounded-2xl bg-(--card-bg) border border-slate-200/10 text-(--foreground) font-bold no-underline hover:bg-(--accent)/5 shadow-sm"
+                            className="flex items-center gap-3 p-4 rounded-2xl bg-(--card-bg) border border-slate-200/10 text-(--foreground) font-bold no-underline lg:hover:bg-(--accent)/5 shadow-sm"
                         >
                             <span className="w-1.5 h-6 bg-(--accent) rounded-full"></span>
                             الرئيسية
@@ -165,7 +165,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                                     href={`/genre/${genre.slug}`}
                                     prefetch={false}
                                     onClick={onClose}
-                                    className="p-2 bg-(--card-bg) border border-slate-200/10 rounded-xl text-center text-xs font-bold text-(--foreground)] opacity-80 hover:opacity-100 hover:border-(--accent)/50 hover:text-(--accent) shadow-sm active:scale-95"
+                                    className="p-2 bg-(--card-bg) border border-slate-200/10 rounded-xl text-center text-xs font-bold text-(--foreground)] opacity-80 lg:hover:opacity-100 lg:hover:border-(--accent)/50 lg:hover:text-(--accent) shadow-sm active:scale-95"
                                 >
                                     {genre.name}
                                 </Link>

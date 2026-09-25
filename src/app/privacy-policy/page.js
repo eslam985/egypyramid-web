@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
                 href="mailto:egypyramidofficial@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--accent)! ml-2 select-all hover:underline transition-colors"
+                className="text-(--accent)! ml-2 select-all lg:hover:underline transition-colors"
               >
                 egypyramidofficial@gmail.com
               </a>

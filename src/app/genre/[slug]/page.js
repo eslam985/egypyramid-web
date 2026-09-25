@@ -142,7 +142,7 @@ export default async function GenrePage({ params, searchParams }) {
                                 <Link
                                     prefetch={false}
                                     href={`/genre/${encodedSlug}?page=${currentPage - 1}`} // 👈 تم تثبيت المسار لتجنب ضياع الرابط
-                                    className="px-4 py-2 bg-[var(--card-bg)] rounded-xl border border-white/5 hover:border-[var(--accent)]"
+                                    className="px-4 py-2 bg-[var(--card-bg)] rounded-xl border border-white/5 lg:hover:border-[var(--accent)]"
                                 >
                                     السابق
                                 </Link>
@@ -156,7 +156,7 @@ export default async function GenrePage({ params, searchParams }) {
                                 <Link
                                     prefetch={false}
                                     href={`/genre/${encodedSlug}?page=${currentPage + 1}`} // 👈 تم تثبيت المسار لتجنب ضياع الرابط
-                                    className="px-4 py-2 bg-(--card-bg) rounded-xl border border-white/5 hover:border-[var(--accent)]"
+                                    className="px-4 py-2 bg-(--card-bg) rounded-xl border border-white/5 lg:hover:border-[var(--accent)]"
                                 >
                                     التالي
                                 </Link>

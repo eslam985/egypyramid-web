@@ -101,7 +101,7 @@ export default function ServerDownloader({ links }) {
                 {links.map((link) => (
                     <div
                         key={link.id}
-                        className={`group relative flex items-center justify-between p-fluid-p bg-[var(--card-bg)] rounded-[2.5rem] border duration-500 overflow-hidden ${isReady ? 'border-white/5 hover:border-[var(--accent)]/40 hover:bg-white/5' : 'border-white/5 opacity-80'
+                        className={`group relative flex items-center justify-between p-fluid-p bg-[var(--card-bg)] rounded-[2.5rem] border duration-500 overflow-hidden ${isReady ? 'border-white/5 lg:hover:border-[var(--accent)]/40 lg:hover:bg-white/5' : 'border-white/5 opacity-80'
                             }`}
                     >
                         <div className="flex items-center gap-4 z-10">
@@ -135,7 +135,7 @@ export default function ServerDownloader({ links }) {
                                     href={getSafeLink(link.url)} // هنا بنشغل الدالة عشان تحول الرابط
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-8 py-3.5 bg-(--accent) text-black/70! rounded-2xl font-black text-[10px] uppercase no-underline hover:scale-105 active:scale-95 shadow-xl shadow-(--accent)/20"
+                                    className="px-8 py-3.5 bg-(--accent) text-black/70! rounded-2xl font-black text-[10px] uppercase no-underline lg:hover:scale-105 active:scale-95 shadow-xl shadow-(--accent)/20"
                                 >
                                     تحميل الآن
                                 </a>

@@ -69,10 +69,10 @@ function TelegramButton({ href, text, Icon, isPrimary = false }) {
         <a
             href={href}
             target="_blank"
-            className={`group relative flex items-center justify-center gap-1 p-1 md:gap-3 md:px-8 md:py-5 rounded-3xl font-black text-fluid-xs md:text-base shadow-xl duration-500 hover:-translate-y-1 no-underline overflow-hidden active:scale-95 flex-1 
+            className={`group relative flex items-center justify-center gap-1 p-1 md:gap-3 md:px-8 md:py-5 rounded-3xl font-black text-fluid-xs md:text-base shadow-xl duration-500 lg:hover:-translate-y-1 no-underline overflow-hidden active:scale-95 flex-1 
             ${isPrimary
-                    ? 'bg-slate-950 text-white hover:bg-white hover:text-slate-950'
-                    : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-950 hover:bg-slate-950 hover:text-white lg:w-60'}`}
+                    ? 'bg-slate-950 text-white lg:hover:bg-white lg:hover:text-slate-950'
+                    : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-950 lg:hover:bg-slate-950 lg:hover:text-white lg:w-60'}`}
         >
             <div className={`p-2 rounded-xl transition-colors ${isPrimary ? 'bg-white/10 group-hover:bg-slate-900/5' : 'bg-slate-950/10 group-hover:bg-white/10'}`}>
                 <Icon size={20} className="group-hover:rotate-12 transition-transform duration-300" />

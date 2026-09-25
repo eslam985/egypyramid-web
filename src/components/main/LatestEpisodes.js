@@ -85,7 +85,7 @@ export default function LatestEpisodes({ episodes }) {
                                 prefetch={false}
                                 href="/genre/latest-episodes"
                                 aria-label="عرض المزيد من الحلقات"
-                                className="group/more flex flex-col items-center gap-4 text-slate-500 hover:text-yellow-500"
+                                className="group/more flex flex-col items-center gap-4 text-slate-500 lg:hover:text-yellow-500"
                             >
                                 <div className="w-14 h-14 rounded-full border-2 border-dashed border-slate-400 dark:border-slate-700 flex items-center justify-center group-hover/more:border-yellow-500 group-hover/more:scale-110 group-hover/more:rotate-90 duration-700">
                                     <ChevronLeft size={24} />

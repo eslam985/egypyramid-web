@@ -39,7 +39,7 @@ export default function SectionHeader({ title, subtitle, icon: Icon, href }) {
             <Link
                 href={href}
                 prefetch={false} // ✅ ضيف السطر ده هنا
-                className="group/btn hidden sm:flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-(--card-bg) backdrop-blur-xl text-fluid-xs font-black text-(--foreground) border border-white/5 hover:border-(--accent)/40 duration-500 hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.2)] active:scale-95 no-underline relative overflow-hidden"
+                className="group/btn hidden sm:flex items-center gap-3 px-6 py-2.5 rounded-2xl bg-(--card-bg) backdrop-blur-xl text-fluid-xs font-black text-(--foreground) border border-white/5 lg:hover:border-(--accent)/40 duration-500 lg:hover:shadow-[0_20px_40px_-15px_rgba(202,138,4,0.2)] active:scale-95 no-underline relative overflow-hidden"
             >
                 {/* Shine Effect */}
                 <div className="absolute inset-0 bg-linear-to-r from-transparent via-(--accent)/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />

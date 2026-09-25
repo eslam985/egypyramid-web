@@ -121,13 +121,13 @@ export default function AdvancedFilter({ genres, availableYears = [] }) {
         <button
           type="button"
           onClick={handleClear}
-          className="px-6 py-2.5 rounded-xl text-sm font-bold border border-(--foreground)/10 text-(--foreground)/70 hover:bg-(--foreground)/5 transition-colors"
+          className="px-6 py-2.5 rounded-xl text-sm font-bold border border-(--foreground)/10 text-(--foreground)/70 lg:hover:bg-(--foreground)/5 transition-colors"
         >
           إعادة ضبط
         </button>
         <button
           type="submit"
-          className="px-6 py-2.5 rounded-xl text-sm font-black bg-(--accent) text-slate-950 hover:opacity-90 transition-opacity"
+          className="px-6 py-2.5 rounded-xl text-sm font-black bg-(--accent) text-slate-950 lg:hover:opacity-90 transition-opacity"
         >
           تطبيق الفلاتر
         </button>

@@ -18,7 +18,7 @@ export default function BackToTop() {
     return (
         <button 
             onClick={scrollToTop}
-            className="fixed bottom-8 left-8 z-50 w-12 h-12 bg-yellow-500 text-slate-950 rounded-2xl flex items-center justify-center shadow-2xl hover:scale-110 active:scale-90 duration-300 animate-fadeInUp border-4 border-[var(--background)]"
+            className="fixed bottom-8 left-8 z-50 w-12 h-12 bg-yellow-500 text-slate-950 rounded-2xl flex items-center justify-center shadow-2xl lg:hover:scale-110 active:scale-90 duration-300 animate-fadeInUp border-4 border-[var(--background)]"
         >
             <ChevronUp size={24} />
         </button>

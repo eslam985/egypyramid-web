@@ -55,7 +55,7 @@ export default function DMCAPage() {
                             href="mailto:egypyramidofficial@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-(--accent)! ml-3 select-all hover:underline cursor-pointer transition-colors"
+                            className="text-(--accent)! ml-3 select-all lg:hover:underline cursor-pointer transition-colors"
                         >
                             egypyramidofficial@gmail.com
                         </a>

@@ -40,14 +40,14 @@ export default function NotFound() {
           <Link
             prefetch={false}
             href="/"
-            className="px-8 py-4 bg-(--accent) text-slate-950 rounded-2xl font-black text-sm uppercase tracking-widest hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] hover:-translate-y-1 no-underline"
+            className="px-8 py-4 bg-(--accent) text-slate-950 rounded-2xl font-black text-sm uppercase tracking-widest lg:hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] lg:hover:-translate-y-1 no-underline"
           >
             الرئيسية
           </Link>
           <Link
             prefetch={false}
             href="/genre/movies"
-            className="px-8 py-4 glass-card text-(--foreground) rounded-2xl font-black text-sm uppercase tracking-widest hover:border-(--accent)/40 hover:text-(--accent) no-underline"
+            className="px-8 py-4 glass-card text-(--foreground) rounded-2xl font-black text-sm uppercase tracking-widest lg:hover:border-(--accent)/40 lg:hover:text-(--accent) no-underline"
           >
             تصفح الأفلام
           </Link>

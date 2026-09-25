@@ -116,7 +116,7 @@ export default async function SeasonPage({ params }) {
           {/* Content Layer */}
           <div className="relative z-10 max-w-7xl mx-auto px-fluid-p w-full text-center md:text-right flex flex-col md:flex-row items-center gap-8">
             {/* Poster Mini */}
-            <div className="hidden md:block w-48 aspect-[2/3] rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-2 hover:rotate-0 transition-transform duration-700">
+            <div className="hidden md:block w-48 aspect-[2/3] rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-2 lg:hover:rotate-0 transition-transform duration-700">
               <Image
                 src={optimizeCloudinary(media.poster_url, 400)}
                 fill
@@ -130,7 +130,7 @@ export default async function SeasonPage({ params }) {
               <Link
                 prefetch={false}
                 href={`/${category}/${encodedSlug}`}
-                className="group inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-(--accent)/10 border border-white/5 rounded-full no-underline"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-white/5 lg:hover:bg-(--accent)/10 border border-white/5 rounded-full no-underline"
               >
                 <ChevronRight
                   size={18}

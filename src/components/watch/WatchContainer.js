@@ -100,7 +100,7 @@ export default function WatchContainer({
                   ? `/${category}/${slug}/download/1`
                   : `/${category}/${slug}/season/${season}/download/${episodeNumber || 1}`
               }
-              className="px-6 py-3 glass-card text-(--foreground) rounded-2xl font-bold text-xs flex items-center gap-2 hover:bg-(--accent) hover:text-slate-950 no-underline"
+              className="px-6 py-3 glass-card text-(--foreground) rounded-2xl font-bold text-xs flex items-center gap-2 lg:hover:bg-(--accent) lg:hover:text-slate-950 no-underline"
             >
               <Download size={16} /> سيرفرات التحميل
             </Link>

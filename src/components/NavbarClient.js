@@ -53,7 +53,7 @@ export default function Navbar({ initialGenres = [] }) { // استقبال ال�
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden group p-3 rounded-xl bg-slate-100/5 border border-slate-100/10 text-slate-400 hover:text-white hover:bg-slate-700 duration-300 active:scale-90"
+              className="md:hidden group p-3 rounded-xl bg-slate-100/5 border border-slate-100/10 text-slate-400 lg:hover:text-white lg:hover:bg-slate-700 duration-300 active:scale-90"
               aria-label="فتح القائمة"
             >
               <Menu size={26} className="group-hover:scale-110 transition-transform" />

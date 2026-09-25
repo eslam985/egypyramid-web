@@ -107,7 +107,7 @@ export default async function SearchPage({ searchParams }) {
                 {currentPage > 1 && (
                   <Link
                     href={buildPageUrl(currentPage - 1)}
-                    className="px-6 py-2.5 rounded-xl text-sm font-bold bg-(--background)/50 border border-(--foreground)/10 hover:border-(--accent) hover:text-(--accent) text-(--foreground)"
+                    className="px-6 py-2.5 rounded-xl text-sm font-bold bg-(--background)/50 border border-(--foreground)/10 lg:hover:border-(--accent) lg:hover:text-(--accent) text-(--foreground)"
                   >
                     السابق
                   </Link>
@@ -120,7 +120,7 @@ export default async function SearchPage({ searchParams }) {
                 {currentPage < Math.ceil(totalCount / limit) && (
                   <Link
                     href={buildPageUrl(currentPage + 1)}
-                    className="px-6 py-2.5 rounded-xl text-sm font-bold bg-(--background)/50 border border-(--foreground)/10 hover:border-(--accent) hover:text-(--accent) text-(--foreground)"
+                    className="px-6 py-2.5 rounded-xl text-sm font-bold bg-(--background)/50 border border-(--foreground)/10 lg:hover:border-(--accent) lg:hover:text-(--accent) text-(--foreground)"
                   >
                     التالي
                   </Link>

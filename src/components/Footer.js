@@ -36,7 +36,7 @@ export default function Footer() {
                                 prefetch={false}
                                 href="/"
                                 aria-label="EGY PYRAMID"
-                                className="group inline-flex items-center no-underline transition-transform hover:scale-105"
+                                className="group inline-flex items-center no-underline transition-transform lg:hover:scale-105"
                             >
                                 {/* التوحيد: استخدام نفس هيكلية الـ Navbar (EGY أولاً برمجياً) */}
                                 <h2 className="flex items-center flex-row-reverse gap-1.5 text-fluid-h2 font-black tracking-tighter antialiased">
@@ -77,7 +77,7 @@ export default function Footer() {
                                     target={href.startsWith('mailto') ? '_self' : '_blank'} // الإيميل يفتح في نفس الصفحة لفتح تطبيق الميل
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="w-12 h-12 flex items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-amber-800 dark:hover:bg-(--accent) hover:text-white dark:hover:text-slate-950 hover:border-transparent hover:-translate-y-2 duration-500"
+                                    className="w-12 h-12 flex items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 lg:hover:bg-amber-800 dark:hover:bg-(--accent) lg:hover:text-white dark:hover:text-slate-950 lg:hover:border-transparent lg:hover:-translate-y-2 duration-500"
                                 >
                                     <Icon size={18} />
                                 </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
                                     <Link
                                         href={item.href}
                                         prefetch={false}
-                                        className="text-slate-600 dark:text-slate-400 hover:text-amber-800 dark:hover:text-(--accent) flex items-center gap-2 group/link no-underline transition-colors duration-300"
+                                        className="text-slate-600 dark:text-slate-400 lg:hover:text-amber-800 dark:hover:text-(--accent) flex items-center gap-2 group/link no-underline transition-colors duration-300"
                                     >
                                         <span className="w-0 group-hover/link:w-3 h-0] group-hover/link:h-1.5 bg-amber-800 dark:bg-(--accent) duration-300 shrink-0" />
                                         {item.name}
@@ -125,7 +125,7 @@ export default function Footer() {
                             href="https://t.me/+1ZN4iRLMER04YzZk"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative flex items-center justify-between w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-2xl p-4 hover:border-amber-700 dark:hover:border-(--accent) overflow-hidden"
+                            className="group relative flex items-center justify-between w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-2xl p-4 lg:hover:border-amber-700 dark:hover:border-(--accent) overflow-hidden"
                         >
                             <div className="flex items-center gap-3 z-10">
                                 <div className="bg-amber-800 dark:bg-(--accent) p-2 rounded-xl text-white dark:text-slate-950 group-hover:scale-110 transition-transform">
@@ -164,14 +164,14 @@ export default function Footer() {
                         <Link
                             prefetch={false}
                             href="/privacy-policy"
-                            className="text-slate-600 dark:text-slate-400 hover:text-amber-800 dark:hover:text-(--accent) transition-colors no-underline"
+                            className="text-slate-600 dark:text-slate-400 lg:hover:text-amber-800 dark:hover:text-(--accent) transition-colors no-underline"
                         >
                             Privacy Policy
                         </Link>
                         <Link
                             href="/dmca"
                             prefetch={false}
-                            className="text-slate-600 dark:text-slate-400 hover:text-amber-800 dark:hover:text-(--accent) transition-colors no-underline"
+                            className="text-slate-600 dark:text-slate-400 lg:hover:text-amber-800 dark:hover:text-(--accent) transition-colors no-underline"
                         >
                             DMCA
                         </Link>

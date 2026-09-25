@@ -22,7 +22,7 @@ export default function SeriesGrid({ series }) {
                         <div
                             key={media.id}
                             // استخدام animate-fade-in-up المعرف في الـ Theme
-                            className="flex-none w-40 md:w-52 snap-start transform duration-500 hover:-translate-y-2 animate-fade-in-up h-fit"
+                            className="flex-none w-40 md:w-52 snap-start transform duration-500 lg:hover:-translate-y-2 animate-fade-in-up h-fit"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="relative group/card rounded-3xl isolate">

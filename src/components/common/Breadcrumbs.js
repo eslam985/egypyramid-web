@@ -67,7 +67,7 @@ export default function Breadcrumbs() {
   return (
     <>
       <nav aria-label="breadcrumb" className="max-w-350 mx-auto no-scrollbar flex bg-(--background) items-center gap-1.5 overflow-x-auto whitespace-nowrap mb-3 pt-3 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-500 md:text-xs ">
-        <Link prefetch={false} href="/" aria-label="العودة للصفحة الرئيسية" className="shrink-0 transition-colors hover:text-(--accent) no-underline flex items-center gap-1">
+        <Link prefetch={false} href="/" aria-label="العودة للصفحة الرئيسية" className="shrink-0 transition-colors lg:hover:text-(--accent) no-underline flex items-center gap-1">
           <Home size={20} className="opacity-70" aria-hidden="true" />
           <span className="hidden sm:inline">الرئيسية</span>
         </Link>
@@ -80,7 +80,7 @@ export default function Breadcrumbs() {
               {isLast ? (
                 <span className="text-[#996903] shrink-0 max-w-30 truncate md:max-w-60">{crumb.label}</span>
               ) : (
-                <Link prefetch={false} href={crumb.href} className="shrink-0 transition-colors hover:text-(--accent) no-underline max-w-25 truncate md:max-w-45" title={crumb.label}>
+                <Link prefetch={false} href={crumb.href} className="shrink-0 transition-colors lg:hover:text-(--accent) no-underline max-w-25 truncate md:max-w-45" title={crumb.label}>
                   {crumb.label}
                 </Link>
               )}

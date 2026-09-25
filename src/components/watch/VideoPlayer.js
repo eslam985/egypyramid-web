@@ -26,7 +26,7 @@ export default function VideoPlayer({ videoUrl, posterUrl, isCinemaMode, toggleC
                     onClick={toggleCinema}
                     className={`group relative py-2 px-4 rounded-xl border  flex items-center gap-2 text-[12px] font-black uppercase tracking-tighter ${isCinemaMode
                         ? 'bg-(--background) text-(--accent) border-white/20 opacity-100 shadow-[0_0_30px_rgba(234,179,8,0.3)]'
-                        : 'glass-card text-(--foreground)/80 t-slate-200 hover:text-(--accent) border-white/10 ' // رفعنا الـ opacity واللون
+                        : 'glass-card text-(--foreground)/80 t-slate-200 lg:hover:text-(--accent) border-white/10 ' // رفعنا الـ opacity واللون
                         }`}
                 >
 

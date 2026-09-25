@@ -191,7 +191,7 @@ export default function MonetizationEngine() {
           <div className="relative">
             <span
               onClick={() => setShowToast(false)}
-              className="absolute -top-2.5 -left-1 cursor-pointer font-bold text-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+              className="absolute -top-2.5 -left-1 cursor-pointer font-bold text-lg text-gray-400 lg:hover:text-gray-600 dark:hover:text-gray-200"
             >
               &times;
             </span>

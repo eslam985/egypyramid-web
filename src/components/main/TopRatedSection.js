@@ -60,7 +60,7 @@ export default function TopRatedSection({ topRated }) {
         <div className="flex-none w-40 md:w-52 flex items-center justify-center snap-start">
           <a
             href="/genre/top-rated"
-            className="group/more flex flex-col items-center gap-4 text-slate-400 hover:text-(--accent) transition-colors"
+            className="group/more flex flex-col items-center gap-4 text-slate-400 lg:hover:text-(--accent) transition-colors"
           >
             <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110">
               <Film size={24} />

@@ -169,7 +169,7 @@ export default async function MediaPage({ params, searchParams }) {
                                     {media.media_type === 'series' && media.seasons?.length > 0 ? (
                                         <a
                                             href="#seasons-section"
-                                            className="group w-full py-5 bg-(--accent) text-slate-950 rounded-2xl font-black flex items-center justify-center gap-3 hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] hover:-translate-y-1 active:scale-95 duration-500 no-underline relative overflow-hidden"
+                                            className="group w-full py-5 bg-(--accent) text-slate-950 rounded-2xl font-black flex items-center justify-center gap-3 lg:hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] lg:hover:-translate-y-1 active:scale-95 duration-500 no-underline relative overflow-hidden"
                                         >
                                             <Play size={22} className="fill-slate-950 group-hover:translate-x-1 transition-transform" />
                                             <span className="relative z-10 text-fluid-p uppercase tracking-widest">عرض المواسم</span>
@@ -179,7 +179,7 @@ export default async function MediaPage({ params, searchParams }) {
                                         <Link
                                             prefetch={false}
                                             href={`/${mediaCategory}/${encodedSlug}/watch`}
-                                            className="group h-13 md:h-16 py-2 px-2  md:py-5 bg-yellow-500 text-(--foreground) rounded-2xl font-black flex items-center justify-center gap-3 hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] hover:-translate-y-1 active:scale-95 duration-500 no-underline relative overflow-hidden"
+                                            className="group h-13 md:h-16 py-2 px-2  md:py-5 bg-yellow-500 text-(--foreground) rounded-2xl font-black flex items-center justify-center gap-3 lg:hover:shadow-[0_20px_40px_rgba(202,138,4,0.3)] lg:hover:-translate-y-1 active:scale-95 duration-500 no-underline relative overflow-hidden"
                                         >
                                             <Play size={18} className="fill-(--accent) group-hover:scale-125 transition-transform" />
                                             <span className=" text-fluid-p uppercase tracking-widest text-black">مشاهدة الآن</span>
@@ -192,7 +192,7 @@ export default async function MediaPage({ params, searchParams }) {
                                         <Link
                                             prefetch={false}
                                             href={`/${mediaCategory}/${encodedSlug}/download/1`}
-                                            className="h-13 md:h-16 glass-card group w-full py-5 text-(--foreground) font-black flex items-center justify-center gap-3 hover:border-(--accent)/50 hover:text-(--accent) duration-500 no-underline"
+                                            className="h-13 md:h-16 glass-card group w-full py-5 text-(--foreground) font-black flex items-center justify-center gap-3 lg:hover:border-(--accent)/50 lg:hover:text-(--accent) duration-500 no-underline"
                                         >
                                             <div className="p-2 rounded-xl bg-(--foreground)/5 group-hover:bg-(--accent)/10 transition-colors">
                                                 <Download size={20} className="group-hover:animate-float" />
@@ -214,19 +214,19 @@ export default async function MediaPage({ params, searchParams }) {
                                 <div className="flex flex-wrap items-center gap-3 text-[10px] md:text-xs font-black uppercase tracking-wider">
 
                                     {/* التقييم */}
-                                    <div className="group px-4 py-2.5 bg-(--background)/10 text-(--foreground)/73 rounded-2xl border border-(--bg-card)/20 flex items-center gap-2 hover:bg-(--bg-card)/30 hover:text-(--accent) duration-500">
+                                    <div className="group px-4 py-2.5 bg-(--background)/10 text-(--foreground)/73 rounded-2xl border border-(--bg-card)/20 flex items-center gap-2 lg:hover:bg-(--bg-card)/30 lg:hover:text-(--accent) duration-500">
                                         <Star size={14} className="fill-(--accent) group-hover:fill-(--background) transition-colors" />
                                         <span className="leading-none">{media.rating || '8.5'}</span>
                                     </div>
 
                                     {/* السنة */}
-                                    <div className="px-4 py-2.5 bg-(--background) text-(--foreground)/73 rounded-2xl border border-white/10 flex items-center gap-2 hover:border-white/20">
+                                    <div className="px-4 py-2.5 bg-(--background) text-(--foreground)/73 rounded-2xl border border-white/10 flex items-center gap-2 lg:hover:border-white/20">
                                         <Calendar size={14} className="opacity-80" />
                                         <span className="leading-none">{media.year}</span>
                                     </div>
 
                                     {/* المدة */}
-                                    <div className="px-4 py-2.5 bg-(--background) text-(--foreground)/73 rounded-2xl border border-white/10 flex items-center gap-2 hover:border-white/20">
+                                    <div className="px-4 py-2.5 bg-(--background) text-(--foreground)/73 rounded-2xl border border-white/10 flex items-center gap-2 lg:hover:border-white/20">
                                         <Clock size={14} className="opacity-70" />
                                         <span className="leading-none">{media.runtime || '120 د'}</span>
                                     </div>
@@ -240,7 +240,7 @@ export default async function MediaPage({ params, searchParams }) {
                                                 prefetch={false}
                                                 key={mg.genres.id}
                                                 href={`/genre/${mg.genres.slug}`}
-                                                className="px-4 py-2.5 bg-(--background) text-[#996903] rounded-2xl border border-blue-500/10 hover:bg-blue-500 hover:text-white duration-500 no-underline flex items-center gap-2"
+                                                className="px-4 py-2.5 bg-(--background) text-[#996903] rounded-2xl border border-blue-500/10 lg:hover:bg-blue-500 lg:hover:text-white duration-500 no-underline flex items-center gap-2"
                                             >
                                                 <span className="w-1 h-1 bg-blue-400 rounded-full animate-pulse" />
                                                 {mg.genres.name}
@@ -259,7 +259,7 @@ export default async function MediaPage({ params, searchParams }) {
                                                 prefetch={false}
                                                 key={`label-${index}`}
                                                 href={`/genre/${encodeURIComponent(cleanLabel)}`}
-                                                className="px-4 py-2.5 bg-emerald-600 text-emerald-400 rounded-2xl border border-emerald-500/10 hover:bg-emerald-500 hover:text-white duration-500 no-underline flex items-center gap-2"
+                                                className="px-4 py-2.5 bg-emerald-600 text-emerald-400 rounded-2xl border border-emerald-500/10 lg:hover:bg-emerald-500 lg:hover:text-white duration-500 no-underline flex items-center gap-2"
                                             >
                                                 <span className="text-[8px] opacity-40">#</span>
                                                 {cleanLabel}
@@ -308,7 +308,7 @@ export default async function MediaPage({ params, searchParams }) {
                                                 key={s.id}
                                                 // ✅ إصلاح: استخدام mediaCategory بدل '/series/' هاردكود
                                                 href={`/${mediaCategory}/${encodedSlug}/season/${s.season_number}`}
-                                                className="glass-card group flex flex-col items-center justify-center p-6 md:p-8 hover:border-(--accent)/50 hover:-translate-y-2 duration-500 no-underline"
+                                                className="glass-card group flex flex-col items-center justify-center p-6 md:p-8 lg:hover:border-(--accent)/50 lg:hover:-translate-y-2 duration-500 no-underline"
                                             >
                                                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-(--foreground)/5 flex items-center justify-center mb-4 group-hover:bg-(--accent) group-hover:text-slate-950 duration-500">
                                                     <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
@@ -342,7 +342,7 @@ export default async function MediaPage({ params, searchParams }) {
                                                     prefetch={false}
                                                     key={ep.id}
                                                     href={`/${mediaCategory}/${encodedSlug}/episode/${ep.episode_number}`}
-                                                    className="aspect-square rounded-xl border border-white/5 bg-white/5 flex items-center justify-center text-[11px] font-black text-(--foreground) hover:bg-(--accent) hover:text-slate-950 hover:border-(--accent) no-underline"
+                                                    className="aspect-square rounded-xl border border-white/5 bg-white/5 flex items-center justify-center text-[11px] font-black text-(--foreground) lg:hover:bg-(--accent) lg:hover:text-slate-950 lg:hover:border-(--accent) no-underline"
                                                 >
                                                     {ep.episode_number}
                                                 </Link>

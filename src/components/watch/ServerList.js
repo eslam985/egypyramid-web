@@ -63,7 +63,7 @@ export default function ServerList({ links, activeServer, onServerChange }) {
             className={`group relative p-3 md:p-4 rounded-xl md:rounded-2xl border duration-300 flex items-center justify-between overflow-hidden ${
               activeServer === link.id
                 ? "bg-(--accent) border-(--accent) shadow-lg shadow-(--accent)/20 scale-[1.02]"
-                : "bg-slate-800 border-white/10 hover:border-(--accent)/30 hover:bg-slate-700"
+                : "bg-slate-800 border-white/10 lg:hover:border-(--accent)/30 lg:hover:bg-slate-700"
             }`}
           >
             <div className="flex items-center gap-3 z-10">

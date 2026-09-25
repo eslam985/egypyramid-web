@@ -61,17 +61,17 @@ export default function HeroSpotlight({ spotlight }) {
                         <Link
                         prefetch={false}
                             href={`/${category}/${spotlight.slug}`}
-                            className="group relative px-3 py-2 md:px-6 md:py-3 bg-(--accent)/80 hover:bg-(--background) text-(--accent) rounded-2xl font-black flex items-center gap-3 overflow-hidden hover:scale-105 hover:shadow-[0_20px_40px_-15px_rgba(234,179,8,0.2)] active:scale-95 no-underline"
+                            className="group relative px-3 py-2 md:px-6 md:py-3 bg-(--accent)/80 lg:hover:bg-(--background) text-(--accent) rounded-2xl font-black flex items-center gap-3 overflow-hidden lg:hover:scale-105 lg:hover:shadow-[0_20px_40px_-15px_rgba(234,179,8,0.2)] active:scale-95 no-underline"
                         >
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                             <PlayCircle size={24} className="relative z-10" />
-                            <span className="relative z-10 text-lg text-slate-900 hover:text-(--accent)">شاهد الآن</span>
+                            <span className="relative z-10 text-lg text-slate-900 lg:hover:text-(--accent)">شاهد الآن</span>
                         </Link>
 
                         <Link
                         prefetch={false}
                             href={`/${category}/${spotlight.slug}`}
-                            className="px-2 py-2 md:px-4 md:py-3 bg-(--bg-card) hover:bg-white/10 backdrop-blur-md text-(--accent) rounded-2xl font-bold flex items-center gap-2 border border-white/10 no-underline hover:text-(--accent)"
+                            className="px-2 py-2 md:px-4 md:py-3 bg-(--bg-card) lg:hover:bg-white/10 backdrop-blur-md text-(--accent) rounded-2xl font-bold flex items-center gap-2 border border-white/10 no-underline lg:hover:text-(--accent)"
                         >
                             <Info className="text-(--accent)" size={20} /> التفاصيل
                         </Link>
