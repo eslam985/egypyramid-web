@@ -97,7 +97,7 @@ export default async function SeasonPage({ params }) {
       )}
       <main className="min-h-screen bg-(--background) pb-20 transition-colors duration-500 overflow-x-hidden">
         {/* --- 1. Hero Section: Cinematic Backdrop --- */}
-        <div className="relative h-[60vh] w-full flex items-end pb-20 overflow-hidden">
+        <div className="relative h- md:h- w-full flex items-end pb-6 md:pb-20 overflow-hidden">
           {/* Background Layer */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -106,17 +106,17 @@ export default async function SeasonPage({ params }) {
               priority
               unoptimized
               alt={media.title}
-              className="object-cover scale-105 blur-[80px] opacity-30 animate-pulse-slow"
+              className="object-cover opacity-20"
             />
             {/* الذكاء في التدرج: بيمنع القص البصري */}
-            <div className="absolute inset-0 bg-gradient-to-t from-(--background) via-(--background)/80 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-(--background) via-transparent to-(--background)" />
+            <div className="absolute inset-0 bg-linear-to-t from-(--background) via-(--background)/80 to-transparent" />
+            <div className="absolute inset-0 hidden md:block bg-linear-to-r from-(--background) via-transparent to-(--background)" />
           </div>
 
           {/* Content Layer */}
-          <div className="relative z-10 max-w-7xl mx-auto px-fluid-p w-full text-center md:text-right flex flex-col md:flex-row items-center gap-8">
+          <div className="relative z-10 max-w-7xl mx-auto px-fluid-p w-full md:pt-3 text-center md:text-right flex flex-col md:flex-row items-center gap-8">
             {/* Poster Mini */}
-            <div className="hidden md:block w-48 aspect-[2/3] rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-2 lg:hover:rotate-0 transition-transform duration-700">
+            <div className="hidden md:block w-48 aspect-2/3 rounded-3xl overflow-hidden shadow-2xl border border-white/10 rotate-2 lg:hover:rotate-0 transition-transform duration-700">
               <Image
                 src={optimizeCloudinary(media.poster_url, 400)}
                 fill
@@ -126,7 +126,7 @@ export default async function SeasonPage({ params }) {
               />
             </div>
 
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-4 pt-3">
               <Link
                 prefetch={false}
                 href={`/${category}/${encodedSlug}`}
@@ -188,10 +188,9 @@ export default async function SeasonPage({ params }) {
                 prefetch={false}
                 key={ep.id}
                 href={`/${category}/${encodedSlug}/season/${seasonNumber}/episode/${ep.episode_number}`}
-                className="group relative no-underline animate-fade-in-up"
-                style={{ animationDelay: `${index * 80}ms` }}
+                className="group relative no-underline"
               >
-                <div className="relative aspect-video rounded-[2rem] overflow-hidden bg-(--card-bg) border border-white/5 shadow-2xl duration-500 group-hover:scale-[1.02] group-hover:border-(--accent)/50 group-hover:shadow-(--accent)/10">
+                <div className="relative aspect-video rounded- overflow-hidden bg-(--card-bg) border border-white/5 shadow-lg transition-colors duration-200 lg:group-hover:border-(--accent)/30">
                   <Image
                     src={optimizeCloudinary(
                       ep.thumbnail_url || media.poster_url,
@@ -199,13 +198,13 @@ export default async function SeasonPage({ params }) {
                     )}
                     fill
                     unoptimized
-                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 duration-1000"
+                    className="object-cover opacity-80 lg:group-hover:opacity-100 transition-opacity duration-200"
                     alt={ep.title || `الحلقة ${ep.episode_number}`}
                   />
 
                   {/* Overlay Play UI */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full bg-(--accent)/90 backdrop-blur-sm flex items-center justify-center shadow-2xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 duration-500 delay-100">
+                    <div className="w-14 h-14 rounded-full bg-(--accent)/90 flex items-center justify-center shadow-xl opacity-0 lg:group-hover:opacity-100 transition-opacity duration-200">
                       <Play
                         size={28}
                         className="fill-slate-900 text-slate-900 ml-1"
@@ -221,7 +220,7 @@ export default async function SeasonPage({ params }) {
                   </div>
 
                   {/* Bottom Info Fade */}
-                  <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/40 to-transparent">
+                  <div className="absolute inset-x-0 bottom-0 p-6 bg-linear-to-t from-black via-black/40 to-transparent">
                     <h2 className="text-sm font-black text-white line-clamp-1 group-hover:text-(--accent) transition-colors">
                       {ep.title || `الحلقة رقم ${ep.episode_number}`}
                     </h2>
