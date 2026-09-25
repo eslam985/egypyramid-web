@@ -24,7 +24,7 @@ export default function RelatedSidebar({ related, title }) {
                     prefetch={false}
                         key={item.id}
                         href={`/${item.category || 'movie'}/${item.slug}/watch`}
-                        className="group flex flex-col shrink-0 w-[130px] gap-3 p-2 rounded-2xl bg-white/[0.02] border border-white/5 transition-all hover:bg-white/5 md:flex-row md:w-full md:bg-transparent md:border-transparent md:hover:border-white/5 snap-start"
+                        className="group flex flex-col shrink-0 w-[130px] gap-3 p-2 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/5 md:flex-row md:w-full md:bg-transparent md:border-transparent md:hover:border-white/5 snap-start"
                     >
                         <div className="relative shrink-0 w-full aspect-[2/3] md:w-14 md:h-[72px] rounded-xl overflow-hidden shadow-lg border border-white/5">
                             <img

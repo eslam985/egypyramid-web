@@ -24,7 +24,7 @@ export default function VideoPlayer({ videoUrl, posterUrl, isCinemaMode, toggleC
                 <div className="flex gap-2"></div>
                 <button
                     onClick={toggleCinema}
-                    className={`group relative py-2 px-4 rounded-xl border  transition-all flex items-center gap-2 text-[12px] font-black uppercase tracking-tighter ${isCinemaMode
+                    className={`group relative py-2 px-4 rounded-xl border  flex items-center gap-2 text-[12px] font-black uppercase tracking-tighter ${isCinemaMode
                         ? 'bg-(--background) text-(--accent) border-white/20 opacity-100 shadow-[0_0_30px_rgba(234,179,8,0.3)]'
                         : 'glass-card text-(--foreground)/80 t-slate-200 hover:text-(--accent) border-white/10 ' // رفعنا الـ opacity واللون
                         }`}
@@ -36,7 +36,7 @@ export default function VideoPlayer({ videoUrl, posterUrl, isCinemaMode, toggleC
             </div>
 
             {/* المشغل */}
-            <div className={`relative aspect-video bg-black rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-2xl border transition-all duration-700 ease-out ${isCinemaMode
+            <div className={`relative aspect-video bg-black rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-2xl border duration-700 ease-out ${isCinemaMode
                 ? 'ring-8 ring-(--accent)/10 border-(--accent)/30 scale-[1.02] md:scale-110  md:mt-10'
                 : 'border-(--accent)/30'
                 }`}>

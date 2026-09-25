@@ -83,7 +83,7 @@ export default function MegaMenu({
                             href={`/genre/${genre.slug}`}
                             prefetch={false}
                             onClick={() => handleLinkClick(event, `/genre/${genre.slug}`)}
-                            className="group relative flex items-center sm:gap-1 sm:px-2 gap-3 px-4 py-2 bg-(--background)/50 border border-slate-200 dark:border-slate-800 rounded-xl transition-all duration-300 hover:text-(--foreground) hover:bg-(--accent)/10 hover:border-(--accent)/20 hover:-translate-y-1 no-underline overflow-hidden backdrop-blur-sm"
+                            className="group relative flex items-center sm:gap-1 sm:px-2 gap-3 px-4 py-2 bg-(--background)/50 border border-slate-200 dark:border-slate-800 rounded-xl duration-300 hover:text-(--foreground) hover:bg-(--accent)/10 hover:border-(--accent)/20 hover:-translate-y-1 no-underline overflow-hidden backdrop-blur-sm"
                         >
                             <span className="w-1.5 h-1.5 bg-(--accent) rounded-full shadow-[0_0_8px_var(--accent)] group-hover:scale-150 transition-transform"></span>
                             <span className="text-fluid-p font-medium text-(--foreground)  dark:group-hover:text-white transition-colors">

@@ -101,11 +101,11 @@ export default function ServerDownloader({ links }) {
                 {links.map((link) => (
                     <div
                         key={link.id}
-                        className={`group relative flex items-center justify-between p-fluid-p bg-[var(--card-bg)] rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${isReady ? 'border-white/5 hover:border-[var(--accent)]/40 hover:bg-white/5' : 'border-white/5 opacity-80'
+                        className={`group relative flex items-center justify-between p-fluid-p bg-[var(--card-bg)] rounded-[2.5rem] border duration-500 overflow-hidden ${isReady ? 'border-white/5 hover:border-[var(--accent)]/40 hover:bg-white/5' : 'border-white/5 opacity-80'
                             }`}
                     >
                         <div className="flex items-center gap-4 z-10">
-                            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 ${isReady ? 'bg-[var(--accent)]/10 text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[var(--background)]' : 'bg-white/5 text-slate-500'
+                            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center duration-500 ${isReady ? 'bg-[var(--accent)]/10 text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[var(--background)]' : 'bg-white/5 text-slate-500'
                                 }`}>
                                 {isReady ? <CheckCircle size={20} /> : <ExternalLink size={20} />}
                             </div>
@@ -135,7 +135,7 @@ export default function ServerDownloader({ links }) {
                                     href={getSafeLink(link.url)} // هنا بنشغل الدالة عشان تحول الرابط
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-8 py-3.5 bg-(--accent) text-black/70! rounded-2xl font-black text-[10px] uppercase no-underline hover:scale-105 active:scale-95 transition-all shadow-xl shadow-(--accent)/20"
+                                    className="px-8 py-3.5 bg-(--accent) text-black/70! rounded-2xl font-black text-[10px] uppercase no-underline hover:scale-105 active:scale-95 shadow-xl shadow-(--accent)/20"
                                 >
                                     تحميل الآن
                                 </a>
@@ -144,7 +144,7 @@ export default function ServerDownloader({ links }) {
                                 <div className="w-24 h-10 bg-white/5 rounded-2xl animate-pulse flex items-center justify-center">
                                     <div className="w-full h-1 bg-white/10 rounded-full mx-4 overflow-hidden">
                                         <div
-                                            className="h-full bg-(--accent) transition-all duration-1000"
+                                            className="h-full bg-(--accent) duration-1000"
                                             style={{ width: `${(5 - countdown) * 20}%` }}
                                         />
                                     </div>

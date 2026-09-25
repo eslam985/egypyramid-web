@@ -20,7 +20,7 @@ export default function SearchBar() {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="ابحث عن فيلم أو مسلسل..."
-                    className="w-full bg-slate-200/5 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-full py-2.5 pl-2 pr-5 outline-none focus:ring-4 focus:ring-yellow-500/10 dark:focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white dark:focus:bg-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-500 transition-all duration-300 shadow-sm"
+                    className="w-full bg-slate-200/5 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-full py-2.5 pl-2 pr-5 outline-none focus:ring-4 focus:ring-yellow-500/10 dark:focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white dark:focus:bg-slate-800 text-sm text-slate-900 dark:text-white placeholder-slate-500 duration-300 shadow-sm"
                 />
 
                 {/* الأيقونة بتتغير لونها ذكياً */}
@@ -39,7 +39,7 @@ export default function SearchBar() {
                                     href={`/${item.category === 'tv' ? 'tv' : 'movie'}/${item.slug}`}
                                     prefetch={false}
                                     onClick={() => setQuery('')} // 👈 عشان تقفل المنيو بعد الاختيار
-                                    className="group/item flex items-center gap-4 p-3 hover:bg-yellow-500/10 transition-all duration-200 no-underline border-b border-slate-100 dark:border-slate-800 last:border-0"
+                                    className="group/item flex items-center gap-4 p-3 hover:bg-yellow-500/10 duration-200 no-underline border-b border-slate-100 dark:border-slate-800 last:border-0"
                                 >
                                     {/* بوستر الفيلم */}
                                     <div className="relative w-12 h-16 flex-none overflow-hidden rounded-lg shadow-sm border border-slate-200 dark:border-slate-700/50">
@@ -72,7 +72,7 @@ export default function SearchBar() {
                         {/* زرار "عرض الكل" المطور */}
                         <button
                             type="submit" // خليه submit عشان يتبع الـ form
-                            className="w-full py-3 bg-slate-50 dark:bg-slate-800/50 hover:bg-yellow-500 hover:text-slate-900 text-xs font-black text-yellow-600 dark:text-yellow-500 transition-all duration-300 border-t border-slate-100 dark:border-slate-800"
+                            className="w-full py-3 bg-slate-50 dark:bg-slate-800/50 hover:bg-yellow-500 hover:text-slate-900 text-xs font-black text-yellow-600 dark:text-yellow-500 duration-300 border-t border-slate-100 dark:border-slate-800"
                         >
                             {loading ? 'جاري التحميل...' : 'مشاهدة كل النتائج'}
                         </button>

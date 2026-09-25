@@ -4,7 +4,7 @@ import { Send, BellRing, Sparkles, Users, Bot } from 'lucide-react';
 export default function TelegramBanner() {
     return (
         <section className="px-3">
-            <div className="relative overflow-hidden bg-linear-to-br from-(--accent) via-(--accent) to-orange-500 dark:to-orange-600 rounded-[2.5rem] md:rounded-[3.5rem] p-3 md:p-fluid-p flex flex-col lg:flex-row items-center justify-between gap-3 md:gap-8 shadow-[0_40px_80px_-20px_rgba(202,138,4,0.3)] border-4 border-white/20 transition-all duration-500">
+            <div className="relative overflow-hidden bg-linear-to-br from-(--accent) via-(--accent) to-orange-500 dark:to-orange-600 rounded-[2.5rem] md:rounded-[3.5rem] p-3 md:p-fluid-p flex flex-col lg:flex-row items-center justify-between gap-3 md:gap-8 shadow-[0_40px_80px_-20px_rgba(202,138,4,0.3)] border-4 border-white/20 duration-500">
 
                 {/* 1. زينة خلفية حركية */}
                 <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/20 blur-[80px] rounded-full animate-pulse" />
@@ -69,7 +69,7 @@ function TelegramButton({ href, text, Icon, isPrimary = false }) {
         <a
             href={href}
             target="_blank"
-            className={`group relative flex items-center justify-center gap-1 p-1 md:gap-3 md:px-8 md:py-5 rounded-3xl font-black text-fluid-xs md:text-base shadow-xl transition-all duration-500 hover:-translate-y-1 no-underline overflow-hidden active:scale-95 flex-1 
+            className={`group relative flex items-center justify-center gap-1 p-1 md:gap-3 md:px-8 md:py-5 rounded-3xl font-black text-fluid-xs md:text-base shadow-xl duration-500 hover:-translate-y-1 no-underline overflow-hidden active:scale-95 flex-1 
             ${isPrimary
                     ? 'bg-slate-950 text-white hover:bg-white hover:text-slate-950'
                     : 'bg-white/10 backdrop-blur-md border border-white/20 text-slate-950 hover:bg-slate-950 hover:text-white lg:w-60'}`}
@@ -80,7 +80,7 @@ function TelegramButton({ href, text, Icon, isPrimary = false }) {
 
             <span className="relative z-10">{text}</span>
 
-            {isPrimary && <Sparkles size={16} className="text-(--accent) absolute top-3 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-125" />}
+            {isPrimary && <Sparkles size={16} className="text-(--accent) absolute top-3 right-4 opacity-0 group-hover:opacity-100 duration-500 group-hover:scale-125" />}
 
             {/* تأثير اللمعة */}
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

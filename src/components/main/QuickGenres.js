@@ -92,7 +92,7 @@ export default function QuickGenres({ genres }) {
                             className="group relative flex items-center gap-3 px-5 py-3 rounded-xl 
                                      bg-[var(--card-bg)] border border-slate-200 dark:border-white/[0.04] 
                                      hover:border-[var(--accent)]/30 hover:bg-[var(--accent)]/[0.02] 
-                                     hover:-translate-y-0.5 transition-all duration-300 ease-out
+                                     hover:-translate-y-0.5 duration-300 ease-out
                                      snap-start flex-none no-underline shadow-xs
                                      hover:shadow-[0_8px_24px_-12px_rgba(var(--accent-rgb),0.3)]"
                         >
@@ -111,7 +111,7 @@ export default function QuickGenres({ genres }) {
                             </span>
 
                             {/* خط توهج سفلي ناعم واحترافي بدلاً من النقطة الحادة */}
-                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] rounded-full bg-[var(--accent)] opacity-0 group-hover:w-1/2 group-hover:opacity-100 transition-all duration-300" />
+                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] rounded-full bg-[var(--accent)] opacity-0 group-hover:w-1/2 group-hover:opacity-100 duration-300" />
                         </Link>
                     );
                 })}

@@ -24,7 +24,7 @@ export default function RelatedMedia({ relatedMedia, currentGenre }) {
                     {relatedMedia.map((item, index) => (
                         <div
                             key={item.id}
-                            className="flex-none w-36 md:w-52 snap-start transform transition-all duration-500 hover:-translate-y-2"
+                            className="flex-none w-36 md:w-52 snap-start transform duration-500 hover:-translate-y-2"
                         >
                             <div className="relative group/card">
                                 <div className="absolute -inset-2 bg-[var(--accent)]/5 rounded-[2rem] blur-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
@@ -39,9 +39,9 @@ export default function RelatedMedia({ relatedMedia, currentGenre }) {
                             href={`/genre/${currentGenre?.slug}`}
                             prefetch={false}
                             aria-label={`عرض مزيد من ${currentGenre?.name || 'الأعمال المشابهة'}`}
-                            className="group/more flex flex-col items-center gap-4 text-slate-400 dark:text-slate-500 hover:text-[var(--accent)] transition-all no-underline"
+                            className="group/more flex flex-col items-center gap-4 text-slate-400 dark:text-slate-500 hover:text-[var(--accent)] no-underline"
                         >
-                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-slate-400 dark:border-slate-700 flex items-center justify-center group-hover/more:border-[var(--accent)] group-hover:scale-110 transition-all">
+                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-slate-400 dark:border-slate-700 flex items-center justify-center group-hover/more:border-[var(--accent)] group-hover:scale-110">
                                 <Play size={24} className="ml-1" />
                             </div>
                             <span className="text-[10px] font-black uppercase tracking-widest text-center text-(--foreground)/85">

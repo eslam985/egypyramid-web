@@ -89,14 +89,14 @@ export default async function GenresIndexPage() {
               prefetch={false}
               key={genre.id}
               href={`/genre/${encodeURIComponent(genre.slug)}`} // 👈 ترميز الـ Slug يحميك من كراش الحروف العربية لو كان اسم القسم بالعربي
-              className="glass-card group relative p-3 md:p-8 h-35 md:h-48 flex flex-col items-center justify-center no-underline border-white/5 hover:border-(--accent)/40 transition-all duration-700 animate-fade-in-up overflow-hidden group"
+              className="glass-card group relative p-3 md:p-8 h-35 md:h-48 flex flex-col items-center justify-center no-underline border-white/5 hover:border-(--accent)/40 duration-700 animate-fade-in-up overflow-hidden group"
               style={{ animationDelay: `${index * 40}ms` }}
             >
               {/* تأثير الحلقات الخلفية عند الـ Hover */}
               <div className="absolute inset-0 bg-radial-gradient from-(--accent)/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
               {/* أيقونة القسم الديناميكية */}
-              <div className="mb-4 text-(--foreground)/20 group-hover:text-(--accent) group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 transform-gpu">
+              <div className="mb-4 text-(--foreground)/20 group-hover:text-(--accent) group-hover:scale-125 group-hover:rotate-6 duration-500 transform-gpu">
                 {getGenreIcon(genre.slug)}
               </div>
 
@@ -105,12 +105,12 @@ export default async function GenresIndexPage() {
               </h2>
 
               {/* عداد الحلقات/الأفلام (Badge) */}
-              <div className="absolute top-3 right-3 px-2 py-0.5 bg-white/5 border border-white/10 rounded-md text-[8px] font-bold text-(--foreground)/30 group-hover:text-(--accent) group-hover:border-(--accent)/20 transition-all">
+              <div className="absolute top-3 right-3 px-2 py-0.5 bg-white/5 border border-white/10 rounded-md text-[8px] font-bold text-(--foreground)/30 group-hover:text-(--accent) group-hover:border-(--accent)/20">
                 {genre.workCount} عمل
               </div>
 
               {/* خط سفلي جمالي (Indicator) */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-(--accent) transition-all duration-500 group-hover:w-full" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-(--accent) duration-500 group-hover:w-full" />
             </Link>
           ))}
         </div>

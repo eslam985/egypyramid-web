@@ -47,7 +47,7 @@ export default function Footer() {
                                     </span>
 
                                     {/* كلمة PYRAMID */}
-                                    <span className="text-amber-800 dark:text-(--accent) transition-all duration-500">
+                                    <span className="text-amber-800 dark:text-(--accent) duration-500">
                                         PYRAMID
                                     </span>
                                 </h2>
@@ -77,7 +77,7 @@ export default function Footer() {
                                     target={href.startsWith('mailto') ? '_self' : '_blank'} // الإيميل يفتح في نفس الصفحة لفتح تطبيق الميل
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="w-12 h-12 flex items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-amber-800 dark:hover:bg-(--accent) hover:text-white dark:hover:text-slate-950 hover:border-transparent hover:-translate-y-2 transition-all duration-500"
+                                    className="w-12 h-12 flex items-center justify-center rounded-2xl border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-amber-800 dark:hover:bg-(--accent) hover:text-white dark:hover:text-slate-950 hover:border-transparent hover:-translate-y-2 duration-500"
                                 >
                                     <Icon size={18} />
                                 </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
                                         prefetch={false}
                                         className="text-slate-600 dark:text-slate-400 hover:text-amber-800 dark:hover:text-(--accent) flex items-center gap-2 group/link no-underline transition-colors duration-300"
                                     >
-                                        <span className="w-0 group-hover/link:w-3 h-0] group-hover/link:h-1.5 bg-amber-800 dark:bg-(--accent) transition-all duration-300 shrink-0" />
+                                        <span className="w-0 group-hover/link:w-3 h-0] group-hover/link:h-1.5 bg-amber-800 dark:bg-(--accent) duration-300 shrink-0" />
                                         {item.name}
                                     </Link>
                                 </li>
@@ -125,7 +125,7 @@ export default function Footer() {
                             href="https://t.me/+1ZN4iRLMER04YzZk"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative flex items-center justify-between w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-2xl p-4 transition-all hover:border-amber-700 dark:hover:border-(--accent) overflow-hidden"
+                            className="group relative flex items-center justify-between w-full bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-2xl p-4 hover:border-amber-700 dark:hover:border-(--accent) overflow-hidden"
                         >
                             <div className="flex items-center gap-3 z-10">
                                 <div className="bg-amber-800 dark:bg-(--accent) p-2 rounded-xl text-white dark:text-slate-950 group-hover:scale-110 transition-transform">

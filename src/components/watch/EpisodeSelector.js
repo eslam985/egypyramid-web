@@ -18,7 +18,7 @@ export default function EpisodeSelector({
     const nextEp = allEpisodes?.find(e => e.episode_number === currentEpNum + 1);
 
     return (
-        <div className={`flex flex-col gap-4 transition-all duration-500 ${isCinemaMode ? 'opacity-0 invisible pointer-events-none' : 'opacity-100'
+        <div className={`flex flex-col gap-4 duration-500 ${isCinemaMode ? 'opacity-0 invisible pointer-events-none' : 'opacity-100'
             }`}>
 
             {/* أزرار التنقل */}
@@ -28,7 +28,7 @@ export default function EpisodeSelector({
                         <Link
                         prefetch={false}
                             href={`/${category}/${encodedSlug}/season/${season}/episode/${prevEp.episode_number}`}
-                            className="flex-1 py-3 bg-white/5 border border-white/5 text-[var(--foreground)] rounded-2xl text-center no-underline text-[10px] font-black flex items-center justify-center gap-1 hover:bg-white/10 transition-all"
+                            className="flex-1 py-3 bg-white/5 border border-white/5 text-[var(--foreground)] rounded-2xl text-center no-underline text-[10px] font-black flex items-center justify-center gap-1 hover:bg-white/10"
                         >
                             <ChevronRight size={14} /> السابق
                         </Link>
@@ -38,7 +38,7 @@ export default function EpisodeSelector({
                         prefetch={false}
                             href={`/${category}/${encodedSlug}/season/${season}/episode/${nextEp.episode_number}`}
 
-                            className="flex-1 py-3 bg-[var(--accent)] text-[var(--background)] rounded-2xl text-center no-underline text-[10px] font-black flex items-center justify-center gap-1 hover:scale-[1.02] transition-all shadow-lg shadow-[var(--accent)]/10"
+                            className="flex-1 py-3 bg-[var(--accent)] text-[var(--background)] rounded-2xl text-center no-underline text-[10px] font-black flex items-center justify-center gap-1 hover:scale-[1.02] shadow-lg shadow-[var(--accent)]/10"
                         >
                             التالي <ChevronLeft size={14} />
                         </Link>
@@ -62,7 +62,7 @@ export default function EpisodeSelector({
                             prefetch={false}
                                 key={ep.id}
                                 href={`/${category}/${encodedSlug}/season/${season}/episode/${ep.episode_number}`}
-                                className={`aspect-square  rounded-xl border flex flex-col items-center justify-center transition-all no-underline relative ${currentEpNum === ep.episode_number
+                                className={`aspect-square  rounded-xl border flex flex-col items-center justify-center no-underline relative ${currentEpNum === ep.episode_number
                                     ? 'bg-(--accent) border-(--accent)/70  shadow-md'
                                     : 'bg-white/5 border-white/5 hover:border-(--accent)/40 hover:bg-white/10'
                                     }`}
@@ -105,7 +105,7 @@ export default function EpisodeSelector({
                                         : `/${category}/${encodedSlug}/season/${season}/download/${currentEpNum || 1}`
                                 }
                                 aria-label={`تحميل ${epData?.medias?.title || 'الحلقة'} بجودة عالية`}
-                                className="p-2 bg-(--accent) text-black/70! rounded-xl hover:scale-110 transition-all shadow-lg shadow-(--accent)/20 flex items-center justify-center pointer"
+                                className="p-2 bg-(--accent) text-black/70! rounded-xl hover:scale-110 shadow-lg shadow-(--accent)/20 flex items-center justify-center pointer"
                             >
                                 <Download size={20} />
                             </Link>

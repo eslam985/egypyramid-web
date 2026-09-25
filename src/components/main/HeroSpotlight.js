@@ -61,7 +61,7 @@ export default function HeroSpotlight({ spotlight }) {
                         <Link
                         prefetch={false}
                             href={`/${category}/${spotlight.slug}`}
-                            className="group relative px-3 py-2 md:px-6 md:py-3 bg-(--accent)/80 hover:bg-(--background) text-(--accent) rounded-2xl font-black flex items-center gap-3 overflow-hidden transition-all hover:scale-105 hover:shadow-[0_20px_40px_-15px_rgba(234,179,8,0.2)] active:scale-95 no-underline"
+                            className="group relative px-3 py-2 md:px-6 md:py-3 bg-(--accent)/80 hover:bg-(--background) text-(--accent) rounded-2xl font-black flex items-center gap-3 overflow-hidden hover:scale-105 hover:shadow-[0_20px_40px_-15px_rgba(234,179,8,0.2)] active:scale-95 no-underline"
                         >
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                             <PlayCircle size={24} className="relative z-10" />
@@ -71,7 +71,7 @@ export default function HeroSpotlight({ spotlight }) {
                         <Link
                         prefetch={false}
                             href={`/${category}/${spotlight.slug}`}
-                            className="px-2 py-2 md:px-4 md:py-3 bg-(--bg-card) hover:bg-white/10 backdrop-blur-md text-(--accent) rounded-2xl font-bold flex items-center gap-2 border border-white/10 transition-all no-underline hover:text-(--accent)"
+                            className="px-2 py-2 md:px-4 md:py-3 bg-(--bg-card) hover:bg-white/10 backdrop-blur-md text-(--accent) rounded-2xl font-bold flex items-center gap-2 border border-white/10 no-underline hover:text-(--accent)"
                         >
                             <Info className="text-(--accent)" size={20} /> التفاصيل
                         </Link>
@@ -83,7 +83,7 @@ export default function HeroSpotlight({ spotlight }) {
                     <div className="relative group animate-float">
                         <div className="absolute -inset-4 bg-yellow-500/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                         {/* ✅ next/image للكارت الجانبي */}
-                        <div className="relative w-64 lg:w-72 aspect-2/3 rotate-6 group-hover:rotate-0 transition-all duration-1000 ease-out">
+                        <div className="relative w-64 lg:w-72 aspect-2/3 rotate-6 group-hover:rotate-0 duration-1000 ease-out">
                             <Image
                                 // نطلب 300 بكسل عرض لتطابق الأبعاد المعروضة (287x430)
                                 // نطلب 600 بكسل لضمان حدة ونقاء البوستر على كافة الشاشات والـ LCP السريع

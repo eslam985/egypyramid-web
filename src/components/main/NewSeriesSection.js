@@ -22,7 +22,7 @@ export default function SeriesGrid({ series }) {
                         <div
                             key={media.id}
                             // استخدام animate-fade-in-up المعرف في الـ Theme
-                            className="flex-none w-40 md:w-52 snap-start transform transition-all duration-500 hover:-translate-y-2 animate-fade-in-up h-fit"
+                            className="flex-none w-40 md:w-52 snap-start transform duration-500 hover:-translate-y-2 animate-fade-in-up h-fit"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="relative group/card rounded-3xl isolate">
@@ -43,7 +43,7 @@ export default function SeriesGrid({ series }) {
                                 className="group/more flex flex-col items-center gap-4 no-underline"
                             >
                                 {/* تعديل الشفافية لحل مشكلة الـ Contrast */}
-                                <div className="w-16 h-16 rounded-full border-2 border-dashed border-(--foreground)/30 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110 transition-all shadow-inner">
+                                <div className="w-16 h-16 rounded-full border-2 border-dashed border-(--foreground)/30 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110 shadow-inner">
                                     <Tv size={24} className="text-(--foreground)/80 group-hover/more:text-(--accent)" />
                                 </div>
                                 {/* استخدام شفافية /80 بدل /60 لحل مشكلة التباين في التقرير */}

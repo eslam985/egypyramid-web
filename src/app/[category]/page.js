@@ -107,7 +107,7 @@ export default async function CategoryPage({ params, searchParams }) {
               <Link
                 prefetch={false}
                 href={`/${category}?page=${currentPage - 1}`}
-                className="glass-card px-8 py-3 text-(--foreground) hover:border-(--accent) hover:text-(--accent) transition-all font-black no-underline active:scale-90"
+                className="glass-card px-8 py-3 text-(--foreground) hover:border-(--accent) hover:text-(--accent) font-black no-underline active:scale-90"
               >
                 السابق
               </Link>
@@ -121,7 +121,7 @@ export default async function CategoryPage({ params, searchParams }) {
               <Link
                 prefetch={false}
                 href={`/${category}?page=${currentPage + 1}`}
-                className="glass-card px-8 py-3 text-(--foreground) hover:border-(--accent) hover:text-(--accent) transition-all font-black no-underline active:scale-90"
+                className="glass-card px-8 py-3 text-(--foreground) hover:border-(--accent) hover:text-(--accent) font-black no-underline active:scale-90"
               >
                 التالي
               </Link>

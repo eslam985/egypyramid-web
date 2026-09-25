@@ -65,7 +65,7 @@ export default function WatchContainer({
     <div className="w-full min-w-0 grid lg:grid-cols-10 gap-6 items-start">
       {/* قائمة السيرفرات */}
       <div
-        className={`lg:col-span-2 min-w-0 order-2 lg:order-1 transition-all duration-500 ${
+        className={`lg:col-span-2 min-w-0 order-2 lg:order-1 duration-500 ${
           isCinemaMode ? "opacity-10 pointer-events-none" : ""
         }`}
       >
@@ -80,7 +80,7 @@ export default function WatchContainer({
       <div className="lg:col-span-8 min-w-0 order-1 lg:order-2 space-y-6">
         {/* معلومات العمل */}
         <div
-          className={`p-6 bg-(--background) rounded-[2.5rem] border border-white/5 shadow-2xl transition-all duration-500 ${
+          className={`p-6 bg-(--background) rounded-[2.5rem] border border-white/5 shadow-2xl duration-500 ${
             isCinemaMode
               ? "opacity-0 pointer-events-none scale-95 h-0 overflow-hidden p-0 m-0"
               : "opacity-100"
@@ -100,7 +100,7 @@ export default function WatchContainer({
                   ? `/${category}/${slug}/download/1`
                   : `/${category}/${slug}/season/${season}/download/${episodeNumber || 1}`
               }
-              className="px-6 py-3 glass-card text-(--foreground) rounded-2xl font-bold text-xs flex items-center gap-2 hover:bg-(--accent) hover:text-slate-950 transition-all no-underline"
+              className="px-6 py-3 glass-card text-(--foreground) rounded-2xl font-bold text-xs flex items-center gap-2 hover:bg-(--accent) hover:text-slate-950 no-underline"
             >
               <Download size={16} /> سيرفرات التحميل
             </Link>

@@ -130,7 +130,7 @@ export default async function SeasonPage({ params }) {
               <Link
                 prefetch={false}
                 href={`/${category}/${encodedSlug}`}
-                className="group inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-(--accent)/10 border border-white/5 rounded-full no-underline transition-all"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-(--accent)/10 border border-white/5 rounded-full no-underline"
               >
                 <ChevronRight
                   size={18}
@@ -191,7 +191,7 @@ export default async function SeasonPage({ params }) {
                 className="group relative no-underline animate-fade-in-up"
                 style={{ animationDelay: `${index * 80}ms` }}
               >
-                <div className="relative aspect-video rounded-[2rem] overflow-hidden bg-(--card-bg) border border-white/5 shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-(--accent)/50 group-hover:shadow-(--accent)/10">
+                <div className="relative aspect-video rounded-[2rem] overflow-hidden bg-(--card-bg) border border-white/5 shadow-2xl duration-500 group-hover:scale-[1.02] group-hover:border-(--accent)/50 group-hover:shadow-(--accent)/10">
                   <Image
                     src={optimizeCloudinary(
                       ep.thumbnail_url || media.poster_url,
@@ -199,13 +199,13 @@ export default async function SeasonPage({ params }) {
                     )}
                     fill
                     unoptimized
-                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 duration-1000"
                     alt={ep.title || `الحلقة ${ep.episode_number}`}
                   />
 
                   {/* Overlay Play UI */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full bg-(--accent)/90 backdrop-blur-sm flex items-center justify-center shadow-2xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                    <div className="w-14 h-14 rounded-full bg-(--accent)/90 backdrop-blur-sm flex items-center justify-center shadow-2xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 duration-500 delay-100">
                       <Play
                         size={28}
                         className="fill-slate-900 text-slate-900 ml-1"

@@ -7,7 +7,7 @@ export default function GenresTrigger({ onOpen, onClose, isOpen }) {
         <button
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
-            className="group flex items-center gap-1.5 py-2 text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-yellow-600 dark:hover:text-yellow-500 transition-all duration-300 bg-transparent border-none cursor-pointer"
+            className="group flex items-center gap-1.5 py-2 text-sm font-bold text-slate-600 dark:text-slate-300 hover:text-yellow-600 dark:hover:text-yellow-500 duration-300 bg-transparent border-none cursor-pointer"
         >
             التصنيفات
             <ChevronDown

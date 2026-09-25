@@ -60,7 +60,7 @@ export default function ServerList({ links, activeServer, onServerChange }) {
           <button
             key={link.id}
             onClick={() => onServerChange(link.url, link.id)}
-            className={`group relative p-3 md:p-4 rounded-xl md:rounded-2xl border transition-all duration-300 flex items-center justify-between overflow-hidden ${
+            className={`group relative p-3 md:p-4 rounded-xl md:rounded-2xl border duration-300 flex items-center justify-between overflow-hidden ${
               activeServer === link.id
                 ? "bg-(--accent) border-(--accent) shadow-lg shadow-(--accent)/20 scale-[1.02]"
                 : "bg-slate-800 border-white/10 hover:border-(--accent)/30 hover:bg-slate-700"

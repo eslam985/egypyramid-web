@@ -38,7 +38,7 @@ export default function LatestEpisodes({ episodes }) {
                             aria-label={`مشاهدة ${ep.medias?.title} الحلقة ${ep.episode_number}`}
                             className="group/card relative flex-none w-[280px] md:w-[320px] snap-start no-underline"
                         >
-                            <div className="relative aspect-16/10 w-full overflow-hidden rounded-4xl bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-white/5 shadow-lg transition-all duration-500 group-hover/card:-translate-y-2 group-hover/card:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] isolate">
+                            <div className="relative aspect-16/10 w-full overflow-hidden rounded-4xl bg-slate-200 dark:bg-slate-800 border border-slate-200 dark:border-white/5 shadow-lg duration-500 group-hover/card:-translate-y-2 group-hover/card:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] isolate">
                                 <Image
                                     // نستخدم 320 بكسل عرض للحلقات عشان تطلع مطابقة للمساحة المعروضة
                                     // ✅ الصح: (رابط الصورة، العرض، النسبة)
@@ -53,7 +53,7 @@ export default function LatestEpisodes({ episodes }) {
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 group-hover/card:opacity-80 transition-opacity" />
                                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                                    <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center scale-50 opacity-0 group-hover/card:scale-100 group-hover/card:opacity-100 transition-all duration-500 shadow-[0_0_30px_rgba(234,179,8,0.5)]">
+                                    <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center scale-50 opacity-0 group-hover/card:scale-100 group-hover/card:opacity-100 duration-500 shadow-[0_0_30px_rgba(234,179,8,0.5)]">
                                         <PlayCircle size={24} className="text-slate-950 fill-slate-950" />
                                     </div>
                                 </div>
@@ -85,9 +85,9 @@ export default function LatestEpisodes({ episodes }) {
                                 prefetch={false}
                                 href="/genre/latest-episodes"
                                 aria-label="عرض المزيد من الحلقات"
-                                className="group/more flex flex-col items-center gap-4 text-slate-500 hover:text-yellow-500 transition-all"
+                                className="group/more flex flex-col items-center gap-4 text-slate-500 hover:text-yellow-500"
                             >
-                                <div className="w-14 h-14 rounded-full border-2 border-dashed border-slate-400 dark:border-slate-700 flex items-center justify-center group-hover/more:border-yellow-500 group-hover/more:scale-110 group-hover/more:rotate-90 transition-all duration-700">
+                                <div className="w-14 h-14 rounded-full border-2 border-dashed border-slate-400 dark:border-slate-700 flex items-center justify-center group-hover/more:border-yellow-500 group-hover/more:scale-110 group-hover/more:rotate-90 duration-700">
                                     <ChevronLeft size={24} />
                                 </div>
                                 <span className="text-[10px] font-black uppercase tracking-[0.3em]">المزيد</span>

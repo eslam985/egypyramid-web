@@ -34,18 +34,18 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                         prefetch={false}
                         href="/"
                         aria-label="EGY PYRAMID"
-                        className="group flex items-center justify-end pl-4  pt-1 no-underline transition-all duration-300 active:scale-95"
+                        className="group flex items-center justify-end pl-4  pt-1 no-underline duration-300 active:scale-95"
                     >
                         {/* إضافة gap-1 لضبط المسافة بين النص والـ Badge بدقة */}
                         <h1 className="flex items-center  flex-row-reverse gap-1.5 font-black tracking-tighter text-2xl select-none antialiased">
 
                             {/* EGY Badge: تحسين الأنيميشن والظل */}
-                            <span className="bg-yellow-500 text-slate-950 px-1.5 py-0.5 rounded-sm text-[10px] font-black shadow-sm group-hover:shadow-[0_0_15px_rgba(234,179,8,0.4)] group-hover:-translate-y-1.5 transition-all duration-500 ease-out uppercase leading-none">
+                            <span className="bg-yellow-500 text-slate-950 px-1.5 py-0.5 rounded-sm text-[10px] font-black shadow-sm group-hover:shadow-[0_0_15px_rgba(234,179,8,0.4)] group-hover:-translate-y-1.5 duration-500 ease-out uppercase leading-none">
                                 EGY
                             </span>
 
                             {/* PYRAMID Text: إضافة لمعة خفيفة (Optional) */}
-                            <span className="relative bg-linear-to-r from-yellow-600 via-yellow-400 to-yellow-600 dark:from-yellow-400 dark:via-yellow-200 dark:to-yellow-500 bg-clip-text text-transparent transition-all duration-500 group-hover:drop-shadow-[0_0_8px_rgba(202,138,4,0.3)]">
+                            <span className="relative bg-linear-to-r from-yellow-600 via-yellow-400 to-yellow-600 dark:from-yellow-400 dark:via-yellow-200 dark:to-yellow-500 bg-clip-text text-transparent duration-500 group-hover:drop-shadow-[0_0_8px_rgba(202,138,4,0.3)]">
                                 PYRAMID
                             </span>
 
@@ -64,7 +64,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
                                 placeholder="ابحث عن فيلم أو مسلسل..."
-                                className="w-full bg-(--card-bg) border border-slate-200/10 rounded-2xl py-3 px-4 pl-12 outline-none focus:ring-2 focus:ring-(--accent)/20 focus:border-(--accent) text-sm text-(--foreground) transition-all shadow-sm"
+                                className="w-full bg-(--card-bg) border border-slate-200/10 rounded-2xl py-3 px-4 pl-12 outline-none focus:ring-2 focus:ring-(--accent)/20 focus:border-(--accent) text-sm text-(--foreground) shadow-sm"
                             />
                             <button type="submit" className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
                                 <Search size={18} />
@@ -117,7 +117,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                                 {/* زر عرض الكل لجعلها مطابقة تماماً للديسكتوب */}
                                 <button
                                     onClick={(e) => goToSearchPage(e, onClose)}
-                                    className="w-full py-3 bg-slate-50 dark:bg-white/5 text-[10px] font-black text-(--accent) border-t border-slate-100 dark:border-white/5 active:bg-(--accent) active:text-white transition-all"
+                                    className="w-full py-3 bg-slate-50 dark:bg-white/5 text-[10px] font-black text-(--accent) border-t border-slate-100 dark:border-white/5 active:bg-(--accent) active:text-white"
                                 >
                                     عرض كل النتائج
                                 </button>
@@ -133,7 +133,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                             href="/"
                             prefetch={false}
                             onClick={onClose}
-                            className="flex items-center gap-3 p-4 rounded-2xl bg-(--card-bg) border border-slate-200/10 text-(--foreground) font-bold no-underline hover:bg-(--accent)/5 transition-all shadow-sm"
+                            className="flex items-center gap-3 p-4 rounded-2xl bg-(--card-bg) border border-slate-200/10 text-(--foreground) font-bold no-underline hover:bg-(--accent)/5 shadow-sm"
                         >
                             <span className="w-1.5 h-6 bg-(--accent) rounded-full"></span>
                             الرئيسية
@@ -165,7 +165,7 @@ export default function MobileMenu({ isOpen, onClose, genres }) { // شيلنا 
                                     href={`/genre/${genre.slug}`}
                                     prefetch={false}
                                     onClick={onClose}
-                                    className="p-2 bg-(--card-bg) border border-slate-200/10 rounded-xl text-center text-xs font-bold text-(--foreground)] opacity-80 hover:opacity-100 hover:border-(--accent)/50 hover:text-(--accent) transition-all shadow-sm active:scale-95"
+                                    className="p-2 bg-(--card-bg) border border-slate-200/10 rounded-xl text-center text-xs font-bold text-(--foreground)] opacity-80 hover:opacity-100 hover:border-(--accent)/50 hover:text-(--accent) shadow-sm active:scale-95"
                                 >
                                     {genre.name}
                                 </Link>

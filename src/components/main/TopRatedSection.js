@@ -29,7 +29,7 @@ export default function TopRatedSection({ topRated }) {
               className="absolute -left-16 -top-20 text-[220px] font-black leading-none pointer-events-none select-none
                         text-transparent stroke-text bg-clip-text bg-linear-to-b 
                         from-(--accent)/30 to-transparent
-                        group-hover/item:from-(--accent)/40 group-hover/item:scale-110 transition-all duration-1000 ease-out
+                        group-hover/item:from-(--accent)/40 group-hover/item:scale-110 duration-1000 ease-out
                         z-0 tracking-tighter italic"
             >
               {index + 1}
@@ -37,7 +37,7 @@ export default function TopRatedSection({ topRated }) {
 
             {/* الكارت: استخدام bg-(--card-bg) الموحد */}
             <div
-              className="w-44 md:w-56 relative z-10 group-hover/item:-rotate-2 group-hover/item:translate-x-2 transition-all duration-500 ease-out shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)] 
+              className="w-44 md:w-56 relative z-10 group-hover/item:-rotate-2 group-hover/item:translate-x-2 duration-500 ease-out shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)] 
                         bg-(--card-bg) rounded-3xl isolate max-h-65 md:max-h-80"
             >
               {/* وسام المراكز الأولى: استخدام animate-float من ملفك */}
@@ -62,7 +62,7 @@ export default function TopRatedSection({ topRated }) {
             href="/genre/top-rated"
             className="group/more flex flex-col items-center gap-4 text-slate-400 hover:text-(--accent) transition-colors"
           >
-            <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110 transition-all">
+            <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110">
               <Film size={24} />
             </div>
             <span className="text-xs font-black uppercase tracking-widest">

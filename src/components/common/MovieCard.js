@@ -36,13 +36,13 @@ export default function MovieCard({ media }) {
       onClick={handleClick}
       prefetch={false}
       className="group block relative perspective-1000 no-underline">
-      <div className="relative aspect-2/3 w-full overflow-hidden rounded-3xl bg-(--card-bg) border border-(--foreground)/10 group-hover:border-(--accent)/40 transition-all duration-700 ease-out group-hover:-translate-y-3 group-hover:rotate-1 shadow-xl group-hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] isolate">
+      <div className="relative aspect-2/3 w-full overflow-hidden rounded-3xl bg-(--card-bg) border border-(--foreground)/10 group-hover:border-(--accent)/40 transition-[transform,border-color] duration-300 ease-out group-hover:-translate-y-2 shadow-xl isolate will-change-transform">
         <Image
           src={imgSrc}
           alt={media.title || "فيلم"}
           fill
           quality={65}
-          className="object-cover transition-all duration-1000 group-hover:scale-110 group-hover:saturate-[1.2] brightness-[0.9] group-hover:brightness-100"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform"
           sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, (max-width: 1024px) 20vw, (max-width: 1280px) 16.66vw, 200px"
           loading="lazy"
           decoding="async"
@@ -50,7 +50,7 @@ export default function MovieCard({ media }) {
         />
 
         {/* التقييم */}
-        <div className="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md px-2 py-1 rounded-xl flex items-center gap-1 border border-white/10 shadow-2xl z-20">
+        <div className="absolute top-3 right-3 bg-slate-950/80 px-2 py-1 rounded-xl flex items-center gap-1 border border-white/10 shadow-xl z-20">
           <Star size={12} className="fill-(--accent) text-(--accent)" />
           <span className="text-fluid-xs font-black text-white tracking-tighter">
             {media.rating || "8.5"}
@@ -59,7 +59,7 @@ export default function MovieCard({ media }) {
 
         {/* زر التشغيل */}
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-(--accent) flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all duration-500 shadow-[0_0_30px_var(--accent)]">
+          <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-(--accent) flex items-center justify-center opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-[opacity,transform] duration-300 shadow-lg">
             <Play size={30} className="fill-slate-950 text-slate-950 ml-1" />
           </div>
         </div>

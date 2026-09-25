@@ -18,7 +18,7 @@ export default function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       aria-label="Toggle dark mode" // ✅ السطر اللي هيحل المشكلة
-      className="p-2.5 rounded-xl bg-(--background)  border border-(--border-color)  text-yellow-500 transition-all active:scale-90"
+      className="p-2.5 rounded-xl bg-(--background)  border border-(--border-color)  text-yellow-500 active:scale-90"
     >
       {mounted && (theme === 'dark' ? <Sun size={22} /> : <Moon size={22} />)}
     </button>

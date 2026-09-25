@@ -24,7 +24,7 @@ export default function MoviesGrid({ movies }) {
             // التعديل في الديف اللي شايل الـ MovieCard
             <div
               key={media.id}
-              className="flex-none w-40 md:w-52 snap-start transform transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+              className="flex-none w-40 md:w-52 snap-start transform duration-500 hover:-translate-y-2 animate-fade-in-up"
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
@@ -41,7 +41,7 @@ export default function MoviesGrid({ movies }) {
           {/* كارت "عرض المزيد" في آخر السكرول - تركة ذكية */}
           <div className="flex-none w-40 md:w-52 flex items-center justify-center snap-start">
             <a href="/genre/movies" className="group/more flex flex-col items-center gap-4 text-slate-400 hover:text-(--accent) transition-colors">
-              <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110 transition-all">
+              <div className="w-16 h-16 rounded-full border-2 border-dashed border-slate-700 flex items-center justify-center group-hover/more:border-(--accent) group-hover/more:scale-110">
                 <Film size={24} />
               </div>
               <span className="text-xs font-black uppercase tracking-widest">عرض المزيد</span>
