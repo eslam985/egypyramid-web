@@ -189,6 +189,16 @@ const GOOD_BOT_SIGNATURES = [
     "gptbot",
     "claudebot",
     "WhatsApp",
+    "grok",
+    "xai",
+    "grok-bot",
+    "chatgpt-user",
+    "oai-searchbot",
+    "anthropic",
+    "claude-web",
+    "perplexity",
+    "youbot",
+    "ai-assistant",
 ];
 // meta-webindexer/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)
 /**
@@ -661,12 +671,15 @@ export async function proxy(request) {
     const acceptLang = request.headers.get("accept-language");
     const secChUa = request.headers.get("sec-ch-ua");
 
-    // 1. المتصفحات الحقيقية (بما فيها الهواتف) ترسل دائماً هيدر اللغة. السكريبتات غالباً تتجاهله.
-    if (!acceptLang) isScraper = true;
+    // 1. المتصفحات الحقيقية ترسل Accept-Language. 
+    // نستثني الـ UA الناقص أو اللي شكله AI/Tool عشان ما نمنعش المساعدين الشرعيين
+    const isIncompleteMozilla = ua.startsWith("Mozilla/") && ua.length < 80 && !ua.includes("Chrome/") && !ua.includes("Firefox/") && !ua.includes("Safari/");
+    
+    if (!acceptLang && !isIncompleteMozilla) {
+        isScraper = true;
+    }
 
-    // 2. كشف تزييف الكروم (مثل البوت الذي يهاجمك)
-    // أي متصفح كروم حقيقي فوق إصدار 110 يُرسل إجبارياً هيدر sec-ch-ua
-    // إذا ادعى أنه كروم حديث ولم يرسل هذا الهيدر، فهو سكريبت 100%
+    // 2. كشف تزييف الكروم الحقيقي فقط (لو ادعى إنه كروم حديث وما بعتش sec-ch-ua)
     if (ua.includes("Chrome/") && !secChUa) {
         const chromeVerMatch = ua.match(/Chrome\/(\d+)/);
         if (chromeVerMatch && parseInt(chromeVerMatch[1]) > 110) {
