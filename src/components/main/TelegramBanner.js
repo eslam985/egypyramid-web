@@ -4,7 +4,7 @@ import { Send, BellRing, Sparkles, Users, Bot } from "lucide-react";
 export default function TelegramBanner() {
   return (
     <section className="px-3">
-      <div className="relative overflow-hidden bg-gradient-to-br from-(--accent) to-orange-500 rounded-[2.5rem] md:rounded-[3.5rem] p-3 md:p-fluid-p flex flex-col lg:flex-row items-center justify-between gap-3 md:gap-8 shadow-lg border border-white/10">
+      <div className="relative overflow-hidden bg-linear-to-br from-(--accent) to-orange-500 rounded-[2.5rem] md:rounded-[3.5rem] p-3 md:p-fluid-p flex flex-col lg:flex-row items-center justify-between gap-3 md:gap-8 shadow-lg border border-white/10">
         {/* 1. زينة خلفية حركية */}
         <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/10 rounded-full pointer-events-none" />
 
@@ -82,7 +82,7 @@ function TelegramButton({ href, text, Icon, isPrimary = false }) {
       <div className="p-2 rounded-xl bg-white/10">
         <Icon size={20} />
       </div>
-      <span>{text}</span>
+      <span className="">{text}</span>
     </a>
   );
 }
